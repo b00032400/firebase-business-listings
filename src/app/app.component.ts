@@ -9,9 +9,13 @@ import { Category } from './Category';
   styleUrls: ['./app.component.css'],
   providers: [FirebaseService]
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
+  title = "FirebaseBusinessListings";
   businesses:Business[];
   categories:Category[];
+  appState: string;
+  activeKey: string;
+
   constructor(private _firebaseService:FirebaseService) {
   
   }
@@ -24,6 +28,15 @@ export class AppComponent implements OnInit{
     this._firebaseService.getCategories().subscribe(categories => {
       this.categories = categories;
     });
+  }
+
+  changeState(state, key) {
+    console.log('Changing state to: ' + state);
+    if (key) {
+      console.log('Changing key to: ' + key);
+      this.activeKey = key;
+    }
+    this.appState = state;
   }
 }
 
