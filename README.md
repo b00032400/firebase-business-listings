@@ -1,5 +1,10 @@
 # FirebaseBusinessListings
 
+One of the "Learn Angular 2 Development By Building 12 Apps" - Eduonix, Brad Traversy... applications.  Uses the FireBase No-SQL DB to manage and display Business Contact info, 
+
+The sample code provided in the for-pay course includes this MIT license file, so I am assuming it is ok to store my working version on public git repo (if not, just please ask and I will take it down)
+
+---
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
 
 ## Development server
