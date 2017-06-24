@@ -2,7 +2,7 @@
   <div class="row">
     <div class="top-bar-left">
       <ul class="menu">
-        <li class="menu-text">BusinessContacts</li>  
+        <li class="menu-text">{{title}}</li>  
       </ul>  
     </div> 
     <div class="top-bar-right">
@@ -11,6 +11,20 @@
   </div>  
 </div>
 <br>
+
+<div class="row">
+  <div class="large-6 columns">
+    <button class="button">Add Business</button>
+  </div>  
+  <div class="large-6 columns">
+    <label> Filter Category
+        <select (change)="filterCategory(filteredCategory.value)" #filteredCategory>
+            <option value="0">Select</option>
+            <option *ngFor="let category of categories" value="{{category.name}}">{{category.name}}</option>
+        </select>
+    </label>
+  </div>  
+</div>
 
 <div *ngIf="appState == 'extend'">
   <div class="row">
